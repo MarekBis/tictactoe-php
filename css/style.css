@@ -1,15 +1,109 @@
-
-body{
-    font-family: "Roboto", sans-serif;
-    margin: 0;
+*{
     padding: 0;
+    margin: 0;
+    font-family: "JetBrains Mono", monospace;
+}
+body{
     box-sizing: border-box;
+    height: 100vh;
 }
 h1{
-    font-size: 80px;
+    font-size: 55px;
     text-transform: uppercase;
+    font-weight: 700;
 }
 h2{
-    font-size: 50px;
+    font-size: 55px;
+    font-weight: 100;
     text-transform: uppercase;
+    color:grey;
+}
+.linearGradient{
+    background: linear-gradient(135deg, rgba(148,255,171,0.7) 10%, rgba(227,102,102,0.7) 50%, rgba(45,192,255,0.7) 90%);
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header,footer{
+    height: 20vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.15);
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+label,input{
+    font-size: 25px;
+}
+
+input{
+    text-align: center;
+    background-color:transparent;
+    width: 60%;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 4px;
+    border-radius: 20px;
+    padding: 5px;
+    border:2px solid transparent;
+    font-size: 20px;
+    margin-bottom: 25px;
+    margin-top:10px;
+}
+input:focus{
+    outline: none;
+}
+
+p{
+    font-size: 25px ;
+}
+
+
+input[type=submit]{
+    width: 50%;   
+}
+
+
+
+/* CSS */
+.button-30 {
+  background-color:transparent;
+  border-radius: 20px;
+  box-shadow: rgba(45, 35, 66, 0.5) 0 2px 4px,rgba(45, 35, 66, 0.5) 0 7px 13px -3px;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-decoration: none;
+}
+
+
+.button-30:hover {
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  transform: translateY(2px);
 }
