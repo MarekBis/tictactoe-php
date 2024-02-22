@@ -1,9 +1,10 @@
-<?
-$idStranky = "start-site";
+<?php
+$idStranky = "startScene";
+
 if (array_key_exists("players-submit", $_POST)) {
-    $player1Name = $_POST["player-1-name"];
-    $player2Name = $_POST["player-2-name"];
-    $idStranky = "play-site";
+    $player1Name = $_POST["player1-name"];
+    $player2Name = $_POST["player2-name"];
+    $idStranky = "playScene";
 }
 ?>
 
@@ -27,7 +28,7 @@ if (array_key_exists("players-submit", $_POST)) {
         <h1>tic tac toe</h1>
         <h2>select players</h2>
     </header>
-    <?php require "./playScene.html" ?>
+    <?php require "./$idStranky.php" ?>
     <footer>
         <strong>
             <p>&copy;2024 Marek Bis</p>

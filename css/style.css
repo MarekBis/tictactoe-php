@@ -18,10 +18,6 @@ h2{
     text-transform: uppercase;
     color:grey;
 }
-.linearGradient{
-    background: linear-gradient(135deg, rgba(148,255,171,0.7) 10%, rgba(227,102,102,0.7) 50%, rgba(45,192,255,0.7) 90%);
-    height: 60vh;
-}
 
 header,footer{
     height: 20vh;
@@ -31,22 +27,58 @@ header,footer{
     align-items: center;
     flex-direction: column;
 }
+.linearGradient{
+    background: linear-gradient(135deg, rgba(148,255,171,0.7) 10%, rgba(227,102,102,0.7) 50%, rgba(45,192,255,0.7) 90%);
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.playContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.box{
+    width: 33%;
+    display: flex;
+    justify-content: center;
+}
 .container{
+    gap: 10px;
     display: flex;
     justify-content: center;
     width: fit-content;
-    padding: 2rem;
+    padding: 1.5rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.15);
 
 }
-.playContainer{
+.playContainer .container{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+    flex-direction: column;
+    text-align: center;
 }
+table,td{
+    border-collapse: collapse;
+}
+td{
+    width: 100px;
+    height: 100px;
+}
+
+.linearGradient i{
+    font-size: 3rem;
+}
+td{
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+}
+/* FORM */
 form{
     display: flex;
     flex-direction: column;
@@ -73,18 +105,10 @@ input:focus{
     outline: none;
 }
 
-p{
-    font-size: 25px ;
-}
-
-
 input[type=submit]{
     width: 50%;   
 }
-
-
-
-/* CSS */
+/* Play button */
 .button-30 {
   background-color:transparent;
   border-radius: 20px;
@@ -102,11 +126,10 @@ input[type=submit]{
   text-decoration: none;
 }
 
-
 .button-30:hover {
   transform: translateY(-2px);
 }
 
 .button-30:active {
-  transform: translateY(2px);
+    transform: translateY(2px);
 }
