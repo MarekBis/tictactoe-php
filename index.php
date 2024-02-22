@@ -1,11 +1,5 @@
 <?php
-$idStranky = "startScene";
-
-if (array_key_exists("players-submit", $_POST)) {
-    $player1Name = $_POST["player1-name"];
-    $player2Name = $_POST["player2-name"];
-    $idStranky = "playScene";
-}
+    require "./code.php"
 ?>
 
 <!DOCTYPE html>
