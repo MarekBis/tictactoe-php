@@ -1,15 +1,5 @@
-<?
-$idStranky = "start-site";
-if (array_key_exists("players-submit", $_POST)) {
-    $player1Name = $_POST["player-1-name"];
-    $player2Name = $_POST["player-2-name"];
-    $idStranky = "play-site";
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/all.min.css">
@@ -21,18 +11,8 @@ if (array_key_exists("players-submit", $_POST)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TicTacToe Game</title>
 </head>
-
 <body>
     <header>
-        <h1>tic tac toe</h1>
-        <h2>select players</h2>
+            <h1>tic tac toe</h1>
+            <h2>select players</h2>
     </header>
-    <?php require "./playScene.html" ?>
-    <footer>
-        <strong>
-            <p>&copy;2024 Marek Bis</p>
-        </strong>
-    </footer>
-</body>
-
-</html>

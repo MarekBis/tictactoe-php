@@ -21,9 +21,6 @@ h2{
 .linearGradient{
     background: linear-gradient(135deg, rgba(148,255,171,0.7) 10%, rgba(227,102,102,0.7) 50%, rgba(45,192,255,0.7) 90%);
     height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 header,footer{
@@ -37,11 +34,17 @@ header,footer{
 .container{
     display: flex;
     justify-content: center;
-    width: 30%;
+    width: fit-content;
     padding: 2rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.15);
+
+}
+.playContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
 }
 form{
