@@ -1,34 +1,49 @@
 <?php
 session_start();
-$idStranky = "startScene";
 
-if (array_key_exists("players-submit", $_POST)) {
-    $player1Name = $_POST["player1-name"];
-    $player2Name = $_POST["player2-name"];
-    $idStranky = "playScene";
-    $turn = 0;
-    $activePlayer = $player1Name;
-    $icon = "<i class='fa-solid fa-o'></i>";
-}
-
-if(array_key_exists("turn",$_GET)){
-    if($turn % 2 == 0 || $turn == 0){
-        //sude kolo
-        $activePlayer = $player1Name;
-        $icon = "<i class='fa-solid fa-o'></i>";
-        $turn++;
+function sudeKolo($argPocetKol){
+    if ($argPocetKol % 2 == 0 || $argPocetKol == 0){
+        return true;
     }else{
-        //liche kolo
-        $activePlayer = $player2Name;
-        $icon = "<i class='fa-solid fa-xmark'></i>";
-        $turn++;
-
+        return false;
     }
+
 }
-echo "POST: ";
-var_dump($_POST);
-echo "GET: ";
-var_dump($_GET);
-echo "SESSION: ";
-var_dump($_SESSION);
+
+
+$znak1 = "<i class='fa-solid fa-o'></i>";
+$znak2 = "<i class='fa-solid fa-x'></i>";
+
+if (array_key_exists("players-submit",$_POST)){
+    $hrac1 = $_POST["player1-name"];
+    $hrac2 = $_POST["player2-name"];
+    $_SESSION["hrac1"] = $hrac1;
+    $_SESSION["hrac2"] = $hrac2;
+    $_SESSION["row1-col1"] = "";
+    $_SESSION["row1-col2"] = "";
+    $_SESSION["row1-col3"] = "";
+
+    $_SESSION["row2-col1"] = "";
+    $_SESSION["row2-col2"] = "";
+    $_SESSION["row2-col3"] = "";
+    
+    $_SESSION["row3-col1"] = "";
+    $_SESSION["row3-col2"] = "";
+    $_SESSION["row3-col3"] = "";
+
+}
+if (!array_key_exists("PHPSESSID",$_COOKIE)){
+    $idStranky = "startScene";
+}
+
+if (array_key_exists("pocetKol", $_SESSION)) {
+    //existuje
+    $_SESSION["pocetKol"]++;
+    $pocetKol = $_SESSION["pocetKol"];
+    $idStranky = "playScene";
+} else {
+    //sess neexistuje
+    $_SESSION["pocetKol"] = -1;
+    $pocetKol = $_SESSION["pocetKol"];
+}
 

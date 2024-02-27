@@ -1,5 +1,5 @@
 <?php
-    require "./code.php"
+    require "./code.php";
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +20,7 @@
 <body>
     <header>
         <h1>tic tac toe</h1>
-        <h2>select players</h2>
+        <h2>the game</h2>
     </header>
     <?php require "./$idStranky.php" ?>
     <footer>
