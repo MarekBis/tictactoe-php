@@ -144,3 +144,6 @@ input[type=submit]{
 .button-30:active {
     transform: translateY(2px);
 }
+.unclickable{
+    pointer-events: none;
+}
