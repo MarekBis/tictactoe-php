@@ -1,0 +1,1 @@
+![Screenshot of a game](./gamePlay.png)
