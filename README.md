@@ -1,1 +1,1 @@
-![Screenshot of a game](./gamePlay.png)
+![Screenshot of a game](./)
